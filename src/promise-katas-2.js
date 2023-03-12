@@ -35,8 +35,7 @@ const food = async () => {
 
 const cat = async () => {
   const response = await fetch("cats");
-  const alphabeticalCats = response.data.cats;
-  return alphabeticalCats.sort();
+  return response.data.cats.sort();
 };
 
 // 3 Create a function that uses the fetch function to make a request to the "dogs" URL and returns

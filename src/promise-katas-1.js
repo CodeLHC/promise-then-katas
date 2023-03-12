@@ -64,11 +64,8 @@ const returnString = () => {
 // returnBob() resolves to the value { name: 'Bob' }
 
 const returnBob = () => {
-  const bob = {
-    name: "Bob",
-  };
   return new Promise((resolve, reject) => {
-    resolve(bob);
+    resolve({name: "Bob"});
   });
 };
 
@@ -77,9 +74,8 @@ const returnBob = () => {
 // returnList() resolves to the value ['eggs', 'apples', 'milk', 'bread']
 
 const returnList = () => {
-  const food = ["eggs", "apples", "milk", "bread"];
   return new Promise((resolve, reject) => {
-    resolve(food);
+    resolve(["eggs", "apples", "milk", "bread"]);
   });
 };
 
@@ -108,11 +104,8 @@ const theNumberOfTheBeast = () => {
 // internalServerError() rejects to { error: 500 }
 
 const internalServerError = () => {
-  let error = {
-    error: 500,
-  };
   return new Promise((resolve, reject) => {
-    reject(error);
+    reject({ error: 500 });
   });
 };
 
@@ -155,6 +148,7 @@ const amIYourFather = (Luke) => {
 function nameReturn(name) {
   return `My name is ${name}`;
 }
+
 const myNameIs = () => {
   return new Promise((resolve, reject) => {
     resolve(nameReturn);
